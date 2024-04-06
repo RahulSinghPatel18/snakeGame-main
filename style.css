@@ -1,0 +1,103 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+#main {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 2, 108);
+}
+#score {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5vw;
+  color: rgba(160, 156, 156, 0.84);
+  margin-bottom: 5vh;
+}
+#highScore {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5vw;
+  color: rgba(160, 156, 156, 0.84);
+  margin-bottom: 5vh;
+}
+#board {
+  height: 71vh;
+  width: 71vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: repeat(35, 2vh);
+  grid-template-columns: repeat(70, 1vw);
+  border: 0.6vw solid rgb(99, 99, 99);
+  border-top:0.6vh solid rgb(99, 99, 99);
+  border-bottom:0.6vh solid rgb(99, 99, 99);
+}
+.square,
+.square2 {
+  white-space: nowrap;
+  background-color: rgb(96, 207, 255);
+  float: left;
+  border: 1px solid rgb(44, 165, 216);
+}
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lower {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 5vw;
+  display: none;
+}
+.buttons:nth-child(3) {
+  margin-right: 0;
+  margin-left:5vw;
+}
+button{
+  background-color: rgb(96, 207, 255);
+  color: rgb(122, 122, 122);
+  font-size: 5vw;
+  margin: 1vh;
+}
+#gameover{
+  padding: 5vmin;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(200, 244, 255);
+  display: none;
+}
+#gameover button{
+  font-size: 1vmax;
+  border: 1px solid navy;
+  padding: 1vmin 1vmax;
+  border-radius: 10vmax;
+  cursor: pointer;
+}
+@media (max-height:600px){
+  .buttons{
+    display: flex;
+  }
+}

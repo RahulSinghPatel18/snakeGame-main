@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="./favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="gameover">
+        <h1>Game Over</h1>
+        <p>Score: <span id="mainscore"></span></p>
+        <button id="restart">Restart</button>
+      </div>
+      <div style="display: flex; gap: 5vw">
+        <div id="score"></div>
+        <div id="highScore"></div>
+      </div>
+      <div id="lower">
+        <div class="buttons">
+          <button><i id="up" class="ri-arrow-up-line"></i></button>
+          <button><i id="down" class="ri-arrow-down-line"></i></button>
+        </div>
+        <div data-num="" id="board"></div>
+        <div class="buttons">
+          <button><i id="right" class="ri-arrow-right-line"></i></button>
+          <button><i id="left" class="ri-arrow-left-line"></i></button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
